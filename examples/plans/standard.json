@@ -1,0 +1,14 @@
+{
+  "name": "standard",
+  "seed": 1,
+  "mode": "round_robin",
+  "force_primary": true,
+  "expected_steps": 10,
+  "max_injections_per_episode": null,
+  "faults": [
+    {"kind": "network_delay", "name": "network_delay", "probability": 0.2, "agents": null, "targets": null, "steps": null, "params": {"min_ms": 50, "max_ms": 500}},
+    {"kind": "tool_error", "name": "tool_error", "probability": 0.05, "agents": null, "targets": null, "steps": null, "params": {"errors": ["TimeoutError", "ConnectionError", "ChaosToolError"]}},
+    {"kind": "hallucination_loop", "name": "hallucination_loop", "probability": 0.03, "agents": null, "targets": null, "steps": null, "params": {"mode": "auto", "magnitude": 5.0}},
+    {"kind": "cyclic_dependency", "name": "cyclic_dependency", "probability": 0.02, "agents": null, "targets": null, "steps": null, "params": {}}
+  ]
+}
