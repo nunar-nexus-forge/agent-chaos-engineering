@@ -13,6 +13,7 @@ All notable changes to `agent-chaos-engineering` are documented here. The format
   the README no longer lists CrewAI among the supported frameworks (there is no CrewAI adapter).
 
 ### Fixed
+- CI caches uv by `pyproject.toml` (the lock file is not committed), which newer `setup-uv` releases require.
 - README install line named the companion package `ma-trace`; the distribution is `multi-agent-observability`.
 - `docs/recovery-patterns.md` now describes `affected_agents` as the number of degraded agents (the
   code never restricted it to downstream agents).
