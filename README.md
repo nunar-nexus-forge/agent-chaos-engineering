@@ -3,7 +3,7 @@
 **Chaos engineering and self-healing recovery patterns for multi-agent LLM systems.**
 
 [![CI](https://github.com/nunar-nexus-forge/agent-chaos-engineering/actions/workflows/ci.yml/badge.svg)](https://github.com/nunar-nexus-forge/agent-chaos-engineering/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/agent-chaos-engineering.svg)](https://pypi.org/project/agent-chaos-engineering/)
+[![PyPI](https://img.shields.io/pypi/v/agent-chaos-engineering.svg?label=PyPI)](https://pypi.org/project/agent-chaos-engineering/)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
 [![License](https://img.shields.io/badge/license-Apache--2.0-green.svg)](LICENSE)
 
