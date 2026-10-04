@@ -6,19 +6,10 @@ All notable changes to `agent-chaos-engineering` are documented here. The format
 
 ## [Unreleased]
 
-### Changed
-- The operational-fault preset and its constructor are now `standard` / `ChaosPlan.standard()`;
-  the bundled plan file is `examples/plans/standard.json`.
-- README, `NOTICE`, `CITATION.cff` and the package metadata now describe the software only;
-  the README no longer lists CrewAI among the supported frameworks (there is no CrewAI adapter).
+## [0.1.0] - 2026-10-03
 
-### Fixed
-- CI caches uv by `pyproject.toml` (the lock file is not committed), which newer `setup-uv` releases require.
-- README install line named the companion package `ma-trace`; the distribution is `multi-agent-observability`.
-- `docs/recovery-patterns.md` now describes `affected_agents` as the number of degraded agents (the
-  code never restricted it to downstream agents).
-
-## [0.1.0] - 2026-09-27
+First release on PyPI: the initial version of 27 September 2026 (*Added*) together with
+the changes made to it before publishing.
 
 ### Added
 - Fault taxonomy: network delay, tool error, hallucination loop, cyclic dependency, stale memory, miscoordination, input perturbation, data poisoning, perception spoofing.
@@ -30,3 +21,15 @@ All notable changes to `agent-chaos-engineering` are documented here. The format
 - Resilience zones, `ZoneSupervisor` control layer with audit log and lockdown, `TrustWeightedDecision` fusion with cross-path consistency.
 - `ScenarioRunner` (baseline / chaos / healed arms with identical seeds) and the resilience `Scorecard` (accuracy retention, recovery latency, CAFR, per-fault success, decision integrity, availability, overhead, RLI/CAFRI/ARI/composite).
 - Built-in simulated pipeline scenario, the `agent-chaos` CLI, LangGraph (`chaos_node`, `heal_node`, `SelfHealingCheckpointSaver`) and LangChain (`chaos_tool`) adapters, and a bridge to `multi-agent-observability` (MA-Trace).
+
+### Changed
+- The operational-fault preset and its constructor are now `standard` / `ChaosPlan.standard()`;
+  the bundled plan file is `examples/plans/standard.json`.
+- README, `NOTICE`, `CITATION.cff` and the package metadata now describe the software only;
+  the README no longer lists CrewAI among the supported frameworks (there is no CrewAI adapter).
+
+### Fixed
+- CI caches uv by `pyproject.toml` (the lock file is not committed), which newer `setup-uv` releases require.
+- README install line named the companion package `ma-trace`; the distribution is `multi-agent-observability`.
+- `docs/recovery-patterns.md` now describes `affected_agents` as the number of degraded agents (the
+  code never restricted it to downstream agents).
